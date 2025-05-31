@@ -1,23 +1,17 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:springten/screens/begining.dart';
-import 'package:springten/screens/create_a_wallet/finish_setup.dart';
-import 'package:springten/screens/create_a_wallet/recovery_phase.dart';
-import 'package:springten/screens/create_a_wallet/set_up_security.dart';
-import 'package:springten/screens/onboarding.dart';
+import 'package:springten/splash_screen/splash_screen.dart';
 
 void main(){
-  runApp(MaterialApp(
+  runApp( MaterialApp(
+    theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(0xFF1A1B23),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF2A2B35),
+          elevation: 0,
+        ),
+      ),
     debugShowCheckedModeBanner: false,
-    //home: FirstPage(),
-    initialRoute: '/',
-    routes: {
-      '/': (context) => FirstPage(),
-      '/onboarding': (context) => Onboarding(),
-      '/setupSecurity': (context) => SetupSecurity(),
-      '/recoveryPhase': (context) => RecoveryPhase(),
-      '/finishSetup': (context) => FinishSetup(),
-    },
+    title: 'SpringTen',
+    home: const SplashScreen(),
   ));
 }
