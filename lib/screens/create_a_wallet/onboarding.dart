@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:springten/create_a_wallet/secret_recovery_phase.dart';
+import 'package:springten/screens/create_a_wallet/asset_blank.dart';
+import 'package:springten/screens/create_a_wallet/secret_recovery_phase.dart';
+import 'package:springten/screens/pages/home_page.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -67,8 +69,12 @@ class _OnboardingState extends State<Onboarding> {
                       backgroundColor: Colors.grey[800], // Set the button color
                     ),
                     onPressed: () {
-                      // Navigate to the next screen
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
                     },
                     child: const Text('I already have a wallet',style: TextStyle(color: Colors.white),),
                   ),

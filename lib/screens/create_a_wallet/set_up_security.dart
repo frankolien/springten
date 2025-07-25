@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:springten/create_a_wallet/wallet_created.dart';
+import 'package:springten/screens/create_a_wallet/wallet_created.dart';
 
 class SetUpSecurity extends StatefulWidget {
   const SetUpSecurity({super.key});

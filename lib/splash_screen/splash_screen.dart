@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:springten/create_a_wallet/onboarding.dart';
+import 'package:springten/screens/create_a_wallet/onboarding.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

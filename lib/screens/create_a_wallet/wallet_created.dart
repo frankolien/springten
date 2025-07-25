@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:springten/constant/overflow.dart';
-import 'package:springten/create_a_wallet/loader.dart';
+import 'package:springten/screens/create_a_wallet/loader.dart';
 
 class WalletCreated extends StatelessWidget {
   const WalletCreated({super.key});

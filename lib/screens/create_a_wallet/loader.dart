@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:springten/create_a_wallet/asset_blank.dart';
-import 'package:springten/create_a_wallet/onboarding.dart';
+import 'package:springten/screens/create_a_wallet/asset_blank.dart';
+import 'package:springten/screens/create_a_wallet/onboarding.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:springten/screens/pages/home_page.dart';
 class Loader extends StatefulWidget {
   const Loader({super.key});
 
@@ -26,7 +27,7 @@ class _LoaderState extends State<Loader> {
     Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const AssetBlank()), // Replace HomeScreen with your next screen
+        MaterialPageRoute(builder: (context) => const HomePage()), // Replace HomeScreen with your next screen
       );
     });
   }

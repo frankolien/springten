@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:springten/create_a_wallet/set_up_security.dart';
+import 'package:springten/screens/create_a_wallet/set_up_security.dart';
 
 class SecretRecoveryPhase extends StatefulWidget {
   const SecretRecoveryPhase({super.key});

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:springten/screens/pages/home_page.dart';
 import 'package:springten/splash_screen/splash_screen.dart';
 
 void main(){
