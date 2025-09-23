@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:springten/screens/create_a_wallet/asset_blank.dart';
-import 'package:springten/screens/create_a_wallet/secret_recovery_phase.dart';
-import 'package:springten/screens/pages/home_page.dart';
+import 'package:springten/screens/create_a_wallet/create_account_screen.dart';
+import 'package:springten/screens/create_a_wallet/import_wallet_screen.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -11,81 +10,94 @@ class Onboarding extends StatefulWidget {
 }
 
 class _OnboardingState extends State<Onboarding> {
+
   @override
   Widget build(BuildContext context) {
    
     return Scaffold(
-      body: Center(
-        child: SafeArea(
-          child: Container(
-            margin: const EdgeInsets.symmetric(vertical: 40),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-             //crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 100.0),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                    'lib/images/logo.png',
-                    width: 100,
-                    height: 100,
-                  ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    'Welcome to SpringTen',
-                    style: TextStyle(fontSize: 24, color: Colors.white,fontWeight: FontWeight.bold),
-                  ),
-                    ],
-                  ),
+      body: SafeArea(
+        child: Container(
+          margin: const EdgeInsets.symmetric(vertical: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 40.0),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'lib/images/logo.png',
+                      width: 100,
+                      height: 100,
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Welcome to Springten',
+                      style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'A boring Ethereum wallet built for DeFi & NFTs',
+                      style: TextStyle(fontSize: 16, color: Colors.grey),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
-
-                
-                //const SizedBox(height: 20),
-                const Spacer(),
-
-                SizedBox(
-                  width: 350,
+              ),
+        
+              //const SizedBox(height: 40),
+              Spacer(),
+        
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                  width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.yellow, // Set the button color
-                    ),
-                    onPressed: () {
-                      // Navigate to the next screen
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SecretRecoveryPhase()));
-                    },
-                    child: const Text('Create a new wallet',style: TextStyle(color: Colors.black),),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.yellow, // Set the button color
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CreateAccountScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('Create a new wallet', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),),
                   ),
                 ),
-                
-                const SizedBox(height: 10),
-                SizedBox(
+              ),
+              
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
                   height: 50,
-                  width: 350,
+                  width: double.infinity,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey[800], // Set the button color
-                    ),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ),
-                      );
-                    },
-                    child: const Text('I already have a wallet',style: TextStyle(color: Colors.white),),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[800], // Set the button color
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ImportWalletScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('I already have a wallet', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
       backgroundColor: Colors.black,
-      
     );
   }
 }

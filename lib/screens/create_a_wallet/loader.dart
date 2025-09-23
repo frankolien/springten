@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:springten/screens/create_a_wallet/asset_blank.dart';
-import 'package:springten/screens/create_a_wallet/onboarding.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:springten/screens/pages/home_page.dart';
 class Loader extends StatefulWidget {
