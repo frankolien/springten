@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:springten/providers/auth_provider.dart';
 import 'package:springten/providers/wallet_provider.dart';
 import 'package:springten/providers/crypto_provider.dart';
-import 'package:springten/services/storage_service.dart';
 import 'package:flutter/services.dart';
 
 class AssetViewModel extends StateNotifier<AssetViewState> {

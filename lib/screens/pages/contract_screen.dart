@@ -293,7 +293,7 @@ class _ContractScreenState extends ConsumerState<ContractScreen>
               style: TextStyle(color: Colors.grey),
             )
           else
-            ...items.map((item) => _buildMarketplaceItem(item)).toList(),
+            ...items.map((item) => _buildMarketplaceItem(item)),
         ],
       ),
     );

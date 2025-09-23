@@ -321,12 +321,12 @@ class _DAppScreenState extends ConsumerState<DAppScreen>
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.grid_view, color: Colors.white, size: 16),
-                              const SizedBox(width: 4),
-                              const Text(
+                              Icon(Icons.grid_view, color: Colors.white, size: 16),
+                              SizedBox(width: 4),
+                              Text(
                                 'NFTs',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -344,12 +344,12 @@ class _DAppScreenState extends ConsumerState<DAppScreen>
                             color: const Color(0xFF2A2B35),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.circle, color: Colors.grey, size: 16),
-                              const SizedBox(width: 4),
-                              const Text(
+                              Icon(Icons.circle, color: Colors.grey, size: 16),
+                              SizedBox(width: 4),
+                              Text(
                                 'Tokens',
                                 style: TextStyle(
                                   color: Colors.grey,
@@ -388,7 +388,7 @@ class _DAppScreenState extends ConsumerState<DAppScreen>
                     const SizedBox(height: 12),
                     
                     // Collections
-                    ...collections.map((collection) => _buildCollectionItem(collection)).toList(),
+                    ...collections.map((collection) => _buildCollectionItem(collection)),
                     
                     const SizedBox(height: 100),
                   ]),

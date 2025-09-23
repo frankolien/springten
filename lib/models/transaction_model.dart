@@ -66,7 +66,7 @@ class Transaction {
   }
 
   String get fullFormattedDate {
-    return '${date.day}/${date.month}/${date.year} / ${formattedTime}';
+    return '${date.day}/${date.month}/${date.year} / $formattedTime';
   }
 }
 

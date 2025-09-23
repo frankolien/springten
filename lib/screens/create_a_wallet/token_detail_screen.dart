@@ -379,7 +379,7 @@ class _TokenDetailScreenState extends ConsumerState<TokenDetailScreen>
       );
     }
 
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: double.infinity,
       child: CustomPaint(

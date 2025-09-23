@@ -47,7 +47,7 @@ class _OnboardingState extends State<Onboarding> {
               ),
         
               //const SizedBox(height: 40),
-              Spacer(),
+              const Spacer(),
         
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

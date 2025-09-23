@@ -10,7 +10,7 @@ class RealtimeChartService {
       StreamController<List<ChartDataPoint>>.broadcast();
   
   Timer? _updateTimer;
-  List<ChartDataPoint> _currentData = [];
+  final List<ChartDataPoint> _currentData = [];
   double _basePrice = 0.0;
 
   Stream<List<ChartDataPoint>> get chartDataStream => _chartDataController.stream;

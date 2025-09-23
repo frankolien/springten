@@ -26,7 +26,7 @@ class _SendScreenState extends ConsumerState<SendScreen>
   bool _isLoading = false;
   bool _showPrivateKey = false;
   double _gasPriceGwei = 0.0;
-  int _gasLimit = 21000;
+  final int _gasLimit = 21000;
   String? _error;
 
   @override

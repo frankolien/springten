@@ -59,7 +59,7 @@ class _AssetBlankState extends ConsumerState<AssetBlank>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => TokenDetailScreen(
+        builder: (context) => const TokenDetailScreen(
           tokenSymbol: 'ETH',
           tokenName: 'Ethereum',
           price: 2500.0, // Mock ETH price
@@ -507,7 +507,7 @@ class _AssetBlankState extends ConsumerState<AssetBlank>
                   padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.info_outline,
                         color: Colors.blue,
                         size: 16,
@@ -603,7 +603,7 @@ class _AssetBlankState extends ConsumerState<AssetBlank>
                       ],
                     ),
                   ),
-                )).toList(),
+                )),
               ],
               ],
               ),

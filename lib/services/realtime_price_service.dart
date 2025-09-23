@@ -10,7 +10,7 @@ class RealtimePriceService {
       StreamController<Map<String, CryptoPriceData>>.broadcast();
   
   Timer? _updateTimer;
-  Map<String, CryptoPriceData> _currentPrices = {};
+  final Map<String, CryptoPriceData> _currentPrices = {};
   final List<String> _supportedCoins = CryptoService.getSupportedCoins();
   bool _isUsingMockData = false;
 
